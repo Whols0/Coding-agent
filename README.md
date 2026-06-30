@@ -1,0 +1,63 @@
+# Code Assistant CLI MVP
+
+This project is a clean-room Python CLI MVP for a code assistant.
+
+## What it does today
+
+- Starts an interactive terminal assistant session
+- Accepts normal chat-like requests and slash commands
+- Scans a workspace and summarizes the repository
+- Generates a practical implementation plan for a coding task
+- Shows a git diff when run inside a git repository
+- Applies a unified diff patch from a file
+- Runs local commands with timeout controls
+
+## Quick start
+
+```bash
+conda env create -f environment.yml
+conda activate code-assistant
+python -m code_assistant.cli
+```
+
+## Interactive usage
+
+```bash
+python -m code_assistant.cli
+```
+
+Example session:
+
+```text
+code-assistant> help me add a login endpoint
+code-assistant> /scan
+code-assistant> /run pytest -q
+code-assistant> /diff
+code-assistant> /exit
+```
+
+Input experience:
+
+- Type `/` then press `Tab` to browse slash commands
+- Use `Tab` and `Shift-Tab` to cycle through choices
+- Press `Ctrl-Space` to force the completion menu open
+- Use arrow keys to walk command history
+
+Available slash commands:
+
+- `/help`
+- `/pwd`
+- `/cd <path>`
+- `/scan [path]`
+- `/ask <task>`
+- `/diff`
+- `/run <command>`
+- `/apply <patch_file>`
+- `/clear`
+- `/exit`
+
+## Notes
+
+- The current MVP focuses on local developer workflows first.
+- It does not depend on leaked code or private implementation details.
+- The planning logic is deterministic for now so the CLI is immediately usable.

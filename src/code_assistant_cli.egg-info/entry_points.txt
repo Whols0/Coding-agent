@@ -1,0 +1,2 @@
+[console_scripts]
+code-assistant = code_assistant.cli:app

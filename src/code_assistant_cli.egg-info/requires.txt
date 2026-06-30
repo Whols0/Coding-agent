@@ -1,0 +1,4 @@
+typer<1.0,>=0.12
+rich<14.0,>=13.7
+pydantic<3.0,>=2.7
+prompt-toolkit<4.0,>=3.0.47

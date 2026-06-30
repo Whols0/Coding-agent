@@ -1,0 +1,6 @@
+.conda/
+.code-assistant-history
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store

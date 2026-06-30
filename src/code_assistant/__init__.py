@@ -1,0 +1,2 @@
+"""Code Assistant CLI MVP."""
+
